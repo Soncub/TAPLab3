@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbitScript : MonoBehaviour
+public class RotationScript : MonoBehaviour
 {
     public Transform target;
-    public float orbitSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +15,8 @@ public class OrbitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var step = orbitSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, step);
+        Vector3 relativePos = target.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, relativePos);
+        transform.rotation = rotation;
     }
 }
