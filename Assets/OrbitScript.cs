@@ -7,8 +7,16 @@ public class OrbitScript : MonoBehaviour
     [SerializeField] private float orbitSpeed = 20f;
     [SerializeField] private Transform orbitTarget;
     private Vector3 axis;
+    [SerializeField] private bool reverse = false;
 
-    // Update is called once per frame
+    void Start()
+    {
+        if (reverse == true)
+        {
+            orbitSpeed = -1 * orbitSpeed;
+        }
+    }
+
     void Update()
     {
         axis = orbitTarget.position;
