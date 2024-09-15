@@ -5,7 +5,7 @@ using UnityEngine;
 public class OrbitScript : MonoBehaviour
 {
     [SerializeField] private float orbitSpeed = 20f;
-    [SerializeField] private Transform orbitTarget;
+    [SerializeField] private GameObject orbitTarget;
     private Vector3 axis;
     [SerializeField] private bool reverse = false;
 
@@ -19,7 +19,7 @@ public class OrbitScript : MonoBehaviour
 
     void Update()
     {
-        axis = orbitTarget.position;
+        axis = orbitTarget.transform.position;
         transform.RotateAround(axis, Vector3.forward, orbitSpeed * Time.deltaTime);
     }
 }

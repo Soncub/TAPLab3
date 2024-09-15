@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67245c97b696aaf46853d31371dcb376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbitSpeed: 20
-  orbitTarget: {fileID: 3893874350526424420, guid: a13a246cdfd1ad1418e621ca1af3858e, type: 3}
+  orbitSpeed: 60
+  orbitTarget: {fileID: 6485507051420622193, guid: a13a246cdfd1ad1418e621ca1af3858e, type: 3}
+  reverse: 0
 --- !u!1 &6186197510954206333
 GameObject:
   m_ObjectHideFlags: 0
